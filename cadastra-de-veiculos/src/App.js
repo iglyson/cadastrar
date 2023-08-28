@@ -12,7 +12,7 @@ function App() {
         <div className="wrap-login">
           <form className="login-form">
 
-            <span className="login-form-title">Cadastrar Veículo!</span>
+            <span className="login-form-title">Cadastrar Veícul!</span>
 
             <span className="login-form-title">
               <img src={cancelaIMG} alt=""/>
