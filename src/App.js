@@ -3,9 +3,12 @@ import {useState } from 'react';
 import './Cadastro.css'
 
 function App() {
-  const[matricula,setMatricula] = useState("")
+  const[registro,setRegistro] = useState("")
   const[placa,setPlaca] = useState("")
-
+  const[marca,setMarca] = useState("")
+  const[modelo,setModelo] = useState("")
+  const[anomodelo,setAnoModelo] = useState("")
+  
   return (
     <div className="container">
       <div className="container-login">
@@ -17,14 +20,17 @@ function App() {
             <span className="login-form-title">
               <img src={cancelaIMG} alt=""/>
             </span>
+              
               <div className="wrap-input">
+                
                 <input 
-                  className={matricula !== ""? 'has-val input' : 'input'}
-                  type="Matricula" 
-                  value={matricula}
-                  onChange={e => setMatricula(e.target.value)}
+                  className={registro !== ""? 'has-val input' : 'input'}
+                  type="registro" 
+                  value={registro}
+                  onChange={e => setRegistro(e.target.value)}
                 />
-                <span className="focus-input" data-placeholder="Matricula"></span>
+                
+                <span className="focus-input" data-placeholder="Registro:" ></span>
 
               </div>
 
@@ -35,9 +41,43 @@ function App() {
                   value={placa}
                   onChange={e => setPlaca(e.target.value)} 
                 />
-                <span className="focus-input" data-placeholder="placa"></span>
+                <span className="focus-input" data-placeholder="Placa:"></span>
 
               </div>
+
+              <div className="wrap-input">
+                <input 
+                  className={marca !== ""? 'has-val input' : 'input'}
+                  type="marca"
+                  value={marca}
+                  onChange={e => setMarca(e.target.value)} 
+                />
+                <span className="focus-input" data-placeholder="Marca:"></span>
+
+              </div>
+
+              <div className="wrap-input">
+                <input 
+                  className={modelo !== ""? 'has-val input' : 'input'}
+                  type="modelo"
+                  value={modelo}
+                  onChange={e => setModelo(e.target.value)} 
+                />
+                <span className="focus-input" data-placeholder="Modelo:"></span>
+
+              </div>
+
+              <div className="wrap-input">
+                <input 
+                  className={anomodelo !== ""? 'has-val input' : 'input'}
+                  type="anomodelo"
+                  value={anomodelo}
+                  onChange={e => setAnoModelo(e.target.value)} 
+                />
+                <span className="focus-input" data-placeholder="Ano do Modelo:"></span>
+
+              </div>
+
 
               <div className="container-cadastra-form-btn">
                   <button className="cadastra-form-btn">Cadastrar</button>
@@ -48,6 +88,8 @@ function App() {
 
       </div>
     </div> 
+
+    
   );
 }
 
