@@ -39,7 +39,7 @@ function App() {
               <div className="wrap-input">
                 
                 <input 
-                  maxLength={5}
+                  maxLength={7}
                   className={cor !== ""? 'has-val input' : 'input'}
                   type="cor" 
                   value={cor}
